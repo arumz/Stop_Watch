@@ -1,0 +1,141 @@
+* {
+    margin: 0
+}
+body {
+    background-color: #fff;
+}
+h1 {
+    background-color: orange;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 0px 15px;
+}
+.all-clocks-container {
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    flex-flow: row nowrap;
+}
+.clock-container {
+    position: relative;
+    width: 450px;
+    height: 450px;
+}
+.clock {
+    position: relative;
+    width: 380px;
+    height: 380px;
+    background-image: url('../img/custom_stopwatch.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 65%;
+}
+
+.small-center-clock {
+    position: relative;
+    width: 65px;
+    height: 65px;
+    background-image: url('../img/ios_clock_small.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 65%;
+    top: 28%;
+    left: 41.5%;
+}
+.clock-center {
+    position: relative;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: #000;
+    top: 48.5%;
+    left: 48.5%;
+}
+.second-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.minute-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.second {
+    background: #000;
+    height: 45%;
+    left: 49.5%;
+    position: absolute;
+    top: 14%;
+    transform-origin: 50% 80%;
+    width: 1%;
+    z-index: 8;
+    animation: rotate 60s infinite steps(60);
+    animation-play-state: paused;
+}
+.minute {
+    background: #000;
+    height: 35%;
+    left: 49.5%;
+    position: absolute;
+    top: 14%;
+    transform-origin: 50% 100%;
+    width: 1%;
+    z-index: 8;
+    animation: rotate 1200s infinite steps(3600);
+    animation-play-state: paused;
+}
+.buttons-container {
+    display: flex;
+    height: 70px;
+    width: 380px;
+    flex-flow: column nowrap;
+    align-items: center;
+  
+}
+.add-button-container {
+    height: 50px;
+    z-index:1
+}
+.start-button-container {
+    height: 50px;
+    z-index:1;
+}
+.other-button-container {
+    height: 30px;
+}
+.start {
+    height: 40px;
+    width: 120px;
+    z-index:2;
+}
+.add {
+    margin: 10px;
+    height: 40px;
+    width: 120px;
+    z-index:2;
+}
+.pause {
+    height: 20px;
+    width: 60px;
+}
+.resume {
+    height: 20px;
+    width: 60px;
+}
+.reset {
+    height: 20px;
+    width: 60px;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotateZ(360deg)
+    }
+}
+@keyframes reset-watch{
+ 
+}
